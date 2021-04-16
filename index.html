@@ -52,7 +52,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>wbx'sblog</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>zebrabin'sblog</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -142,12 +142,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/heiying.jpg') no-repeat center center;
+         style="background: url('/img/munihei.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="王彬晓的个人博客">
+            <span class="h2" id="subtitle" title="ZebraBin'sBlog">
               
             </span>
 
@@ -179,7 +179,76 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/04/16/Docker-Ubuntu18-04%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" target="_self">
+          <img src="/images/src=http___www.idctx.cn_d_file_p_2018-11-20_b5c2eb93e03cd594e9cda6e056ddcd06.jpg&refer=http___www.idctx.jpg" srcset="/img/loading.gif" lazyload alt="Docker Ubuntu18.04中文乱码">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/16/Docker-Ubuntu18-04%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">Docker Ubuntu18.04中文乱码</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/16/Docker-Ubuntu18-04%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">
+          
+          
+            
+          
+          docker ubuntu18.04使用cat查看中文正常，使用vim查看中文乱码。
+Ubuntu中文乱码解决此问题需要修改“/etc/profile”文件。
+1、修改前查看本地使用的语言环境：
+1locale
+
+2、查看本地支持的语言环境：
+1locale -a
+
+3、然后将“/etc/profile”文件的结尾添加上“export  LANG=C.UTF-8”编辑文件：
+1vim /etc/p
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-16 15:28" pubdate>
+              2021-04-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux%E9%85%8D%E7%BD%AE/">Linux配置</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/04/15/hello-world/" target="_self">
+          <img src="/images/hexo.jpg" srcset="/img/loading.gif" lazyload alt="Hello World">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
         <a href="/2021/04/15/hello-world/">Hello World</a>
@@ -200,12 +269,26 @@ Quick
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-15 14:50" pubdate>
+            <time datetime="2021-04-15 17:56" pubdate>
               2021-04-15
             </time>
           </div>
         
         
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Hexo/">Hexo</a>
+            
+          </div>
         
       </div>
     </article>
@@ -309,6 +392,8 @@ Quick
   <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
