@@ -18,7 +18,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>Hello World - wangbx</title>
+  <title>C++ 矩形交集和并集的面积-离散化 - wangbx</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="C++ 矩形交集和并集的面积-离散化">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-15 17:56" pubdate>
-        2021年4月15日 下午
+      <time datetime="2021-04-16 17:12" pubdate>
+        2021年4月16日 下午
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      562 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      9
        分钟
     </span>
   
@@ -233,22 +233,15 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">C++ 矩形交集和并集的面积-离散化</h1>
             
             <div class="markdown-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+              <figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><code class="hljs prolog">//离散化，x,y坐标分别按从小到大排序<br>//离散化<br>//<span class="hljs-number">1</span>、首先分离出所有的横坐标和纵坐标分别按升序存入数组<span class="hljs-symbol">X</span>[ ]和<span class="hljs-symbol">Y</span>[ ]中.<br>//<span class="hljs-number">2</span>、 设数组<span class="hljs-symbol">XY</span>[ ][ ].对于每个矩形(x1,y1)(x2,y2)确定i1,i2,j1,j2,使得,<span class="hljs-symbol">X</span>[i1]&gt;x1,<span class="hljs-symbol">X</span>[i2]&lt;=x2,<span class="hljs-symbol">Y</span>[i1]&gt;y1,<span class="hljs-symbol">Y</span>[i2]&gt;=y2令<span class="hljs-symbol">XY</span>[ i ][ j ] = <span class="hljs-number">1</span> (i从i1到i2，j从j1到j2)<br>//<span class="hljs-number">3</span>、统计面积：area+=<span class="hljs-symbol">XY</span>[i][j] *(<span class="hljs-symbol">X</span>[i]-<span class="hljs-symbol">X</span>[i<span class="hljs-number">-1</span>])*(<span class="hljs-symbol">Y</span>[i] – <span class="hljs-symbol">Y</span>[i<span class="hljs-number">-1</span>])<br> <br>#include&lt;iostream&gt;<br>#include&lt;string.h&gt;<br>#include&lt;stdio.h&gt;<br>#include &lt;algorithm&gt;<br>using namespace std;<br>double x[<span class="hljs-number">201</span>],y[<span class="hljs-number">201</span>],s[<span class="hljs-number">101</span>][<span class="hljs-number">4</span>];<br>int xy[<span class="hljs-number">201</span>][<span class="hljs-number">201</span>] = &#123;<span class="hljs-number">0</span>&#125;;<br>int n,cas=<span class="hljs-number">0</span>;<br>double sum1; // 并集面积<br>double sum2; // 交集面积<br>int main()<br>&#123;<br>    int i,j,k;<br>    while(cin&gt;&gt;n)<br>    &#123;   <br>        if(n==<span class="hljs-number">0</span>)<br>            break;<br>        cas++;<br>        k=<span class="hljs-number">0</span>;<br>        sum1 = <span class="hljs-number">0.0</span>;<br>        sum2 = <span class="hljs-number">0.0</span>;<br>        memset(xy,<span class="hljs-number">0</span>,sizeof(xy));<br>        for(i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>        &#123;<br>            cin&gt;&gt;s[i][<span class="hljs-number">0</span>]&gt;&gt;s[i][<span class="hljs-number">1</span>]&gt;&gt;s[i][<span class="hljs-number">2</span>]&gt;&gt;s[i][<span class="hljs-number">3</span>];<br>            x[k]=s[i][<span class="hljs-number">0</span>];<br>            y[k]=s[i][<span class="hljs-number">1</span>];<br>            k++;<br>            x[k]=s[i][<span class="hljs-number">2</span>];<br>            y[k]=s[i][<span class="hljs-number">3</span>];<br>            k++;<br>        &#125;<br>        sort(x,x+<span class="hljs-number">2</span>*n);<br>        sort(y,y+<span class="hljs-number">2</span>*n);<br>        int kk = <span class="hljs-number">0</span>;<br>        for(k=<span class="hljs-number">1</span>;k&lt;=n;k++)<br>        &#123;<br>            int i1,i2,j1,j2;<br>            for(i1=<span class="hljs-number">0</span>;i1&lt;<span class="hljs-number">2</span>*n;i1++)<br>            &#123;<br>                if(x[i1]==s[k][<span class="hljs-number">0</span>])<br>                    break;<br>            &#125;<br>            for(i2=<span class="hljs-number">0</span>;i2&lt;<span class="hljs-number">2</span>*n;i2++)<br>            &#123;<br>                if(x[i2]==s[k][<span class="hljs-number">2</span>])<br>                    break;<br>            &#125;<br>            for(j1=<span class="hljs-number">0</span>;j1&lt;<span class="hljs-number">2</span>*n;j1++)<br>            &#123;<br>                if(y[j1]==s[k][<span class="hljs-number">1</span>])<br>                    break;<br>            &#125;<br>            for(j2=<span class="hljs-number">0</span>;j2&lt;<span class="hljs-number">2</span>*n;j2++)<br>            &#123;<br>                if(y[j2]==s[k][<span class="hljs-number">3</span>])<br>                    break;<br>            &#125;<br>            for(i=i1;i&lt;i2;i++)<br>            &#123;<br>                for(j=j1;j&lt;j2;j++)<br>                &#123;<br>                    xy[i][j] |= <span class="hljs-number">1</span>&lt;&lt;(k<span class="hljs-number">-1</span>);<br>                &#125;<br>            &#125;<br>            kk |= <span class="hljs-number">1</span>&lt;&lt;(k<span class="hljs-number">-1</span>); // 所有bit都置为<span class="hljs-number">1</span><br>        &#125;<br>        <br>        for(i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">2</span>*n;i++)<br>        &#123;<br>            for(j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">2</span>*n;j++)<br>            &#123;<br>                sum1 += ((xy[i][j] != <span class="hljs-number">0</span> ? <span class="hljs-number">1</span>:<span class="hljs-number">0</span>)*(x[i+<span class="hljs-number">1</span>]-x[i])*(y[j+<span class="hljs-number">1</span>]-y[j])); // 只要!=<span class="hljs-number">0</span>，说明至少有一个矩形占据过<br>                sum2 += ((xy[i][j] == kk ? <span class="hljs-number">1</span>:<span class="hljs-number">0</span>)*(x[i+<span class="hljs-number">1</span>]-x[i])*(y[j+<span class="hljs-number">1</span>]-y[j])); // 每个矩形都占据过这里<br>            &#125;<br>        &#125;<br>        printf(<span class="hljs-string">&quot;Test case #%d\n&quot;</span>,cas);<br>        printf(<span class="hljs-string">&quot;并集面积: %.2f\n&quot;</span>,sum1);<br>        printf(<span class="hljs-string">&quot;交集面积: %.2f\n&quot;</span>,sum2);<br>        printf(<span class="hljs-string">&quot;\n&quot;</span>);<br>    &#125;<br>    return <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs subunit">输入：<br>2<br>10 10 20 20<br>15 15 25 25.5<br>输出：<br><span class="hljs-keyword">Test </span>case #1<br>并集面积: 180.00<br>交集面积: 25.00<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs subunit">输入：<br>3<br>10 10 20 20<br>15 8 30 15<br>17 13 25 25<br>输出：<br><span class="hljs-keyword">Test </span>case #2<br>并集面积: 245.00<br>交集面积: 6.00<br></code></pre></td></tr></table></figure>
+<p><img src="/images/1435243-20200818163121981-923844168.png" srcset="/img/loading.gif" lazyload><br><img src="/images/1435243-20200818163112268-1586933907.png" srcset="/img/loading.gif" lazyload><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/fall221/article/details/12314489?locationNum=10&fps=1">原文作者</a></p>
 
             </div>
             <hr>
@@ -258,7 +251,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+                      <a class="hover-with-bg" href="/categories/C/">C++</a>
                     
                   </div>
                 
@@ -266,7 +259,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
+                      <a class="hover-with-bg" href="/tags/C/">C++</a>
                     
                   </div>
                 
@@ -283,15 +276,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/16/Docker-Ubuntu18-04%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Docker Ubuntu18.04中文乱码</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/04/16/%E6%B5%81%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1-Ubuntu%E9%83%A8%E7%BD%B2srs%E3%80%81windows%E9%83%A8%E7%BD%B2nginx/">
+                        <span class="hidden-mobile">流媒体服务 Ubuntu部署srs、windows部署nginx</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

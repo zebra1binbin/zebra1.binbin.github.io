@@ -18,7 +18,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>Hello World - wangbx</title>
+  <title>流媒体服务 Ubuntu部署srs、windows部署nginx - wangbx</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="流媒体服务 Ubuntu部署srs、windows部署nginx">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-15 17:56" pubdate>
-        2021年4月15日 下午
+      <time datetime="2021-04-16 16:58" pubdate>
+        2021年4月16日 下午
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      277 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      4
        分钟
     </span>
   
@@ -233,23 +233,29 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">流媒体服务 Ubuntu部署srs、windows部署nginx</h1>
             
             <div class="markdown-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+              <h4 id="Ubuntu部署SRS"><a href="#Ubuntu部署SRS" class="headerlink" title="Ubuntu部署SRS"></a>Ubuntu部署SRS</h4><p>1、获取SRS项目<br>从码云获取</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/winlinvip/</span>srs.oschina.git srs<br></code></pre></td></tr></table></figure>
+<p>从github获取</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ossrs/</span>srs.git<br></code></pre></td></tr></table></figure>
+<p>2、进入trunk编辑</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-keyword">cd</span> trunk<br><span class="hljs-string">./configure</span> &amp;&amp; make<br></code></pre></td></tr></table></figure>
+<p>3、启动（指定配置文件）</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">.<span class="hljs-regexp">/objs/</span>srs -c conf/srs.conf<br></code></pre></td></tr></table></figure>
+<p>配置文件默认配置：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">listen</span>              <span class="hljs-number">1935</span>;<br><span class="hljs-attribute">max_connections</span>     <span class="hljs-number">1000</span>;<br><span class="hljs-attribute">srs_log_tank</span>        file;<br><span class="hljs-attribute">srs_log_file</span>        ./objs/srs.log;<br><span class="hljs-section">http_api</span> &#123;<br>    <span class="hljs-attribute">enabled</span>         <span class="hljs-literal">on</span>;<br>    <span class="hljs-attribute">listen</span>          <span class="hljs-number">1985</span>;<br>&#125;<br><span class="hljs-section">http_server</span> &#123;<br>    <span class="hljs-attribute">enabled</span>         <span class="hljs-literal">on</span>;<br>    <span class="hljs-attribute">listen</span>          <span class="hljs-number">8080</span>;<br>    <span class="hljs-attribute">dir</span>             ./objs/nginx/html;<br>&#125;<br><span class="hljs-section">stats</span> &#123;<br>    <span class="hljs-attribute">network</span>         <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">disk</span>            sda sdb xvda xvdb;<br>&#125;<br><span class="hljs-attribute">vhost</span> __defaultVhost__ &#123;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="使用ffmpeg推流测试"><a href="#使用ffmpeg推流测试" class="headerlink" title="使用ffmpeg推流测试"></a>使用ffmpeg推流测试</h4><p>1、推流本地视频</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">ffmpeg.exe -re -i 本地视频文件 -f flv rtmp:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">1935</span><span class="hljs-regexp">/live/</span><span class="hljs-number">123</span><br></code></pre></td></tr></table></figure>
+<p>2、摄像头推流</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">查看设备列表<br>ffmpeg -list_devices true -f dshow -i dummy <br>推流<br>ffmpeg -f dshow -i video=<span class="hljs-string">&quot;devicesname&quot;</span> -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -f flv rtmp:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">1935</span><span class="hljs-regexp">/live/</span><span class="hljs-number">123</span><br></code></pre></td></tr></table></figure>
+<p>3、ffplay验证</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">ffplay</span> <span class="hljs-string">&quot;rtmp://127.0.0.1:1935/live/123&quot;</span><br></code></pre></td></tr></table></figure>
+<h4 id="windows部署nginx"><a href="#windows部署nginx" class="headerlink" title="windows部署nginx"></a>windows部署nginx</h4><p>1、下载支持rtmp的nginx <a target="_blank" rel="noopener" href="http://nginx-win.ecsds.eu/download/nginx%201.7.11.3%20Gryphon.zip">nginx下载地址</a><br>2、下载rtmp模块解压后放在nginx.exe的同级目录 <a target="_blank" rel="noopener" href="https://codeload.github.com/arut/nginx-rtmp-module/zip/master">rtmp模块</a><br>3、配置nginx</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">rtmp</span> &#123;<br>    <span class="hljs-section">server</span> &#123;<br>        <span class="hljs-attribute">listen</span> <span class="hljs-number">1935</span>;<br>        <span class="hljs-attribute">chunk_size</span> <span class="hljs-number">4096</span>;<br>        <span class="hljs-attribute">application</span> live &#123;<br>            <span class="hljs-attribute">live</span> <span class="hljs-literal">on</span>;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>4、指定配置文件启动nginx</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">nginx.exe -c <span class="hljs-keyword">conf</span>\nginx-<span class="hljs-keyword">win</span>.<span class="hljs-keyword">conf</span><br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -258,7 +264,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+                      <a class="hover-with-bg" href="/categories/%E6%B5%81%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/">流媒体服务</a>
                     
                   </div>
                 
@@ -266,7 +272,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
+                      <a class="hover-with-bg" href="/tags/%E6%B5%81%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/">流媒体服务</a>
                     
                   </div>
                 
@@ -283,15 +289,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/16/Docker-Ubuntu18-04%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">
+                      <a href="/2021/04/16/C-%E7%9F%A9%E5%BD%A2%E4%BA%A4%E9%9B%86%E5%92%8C%E5%B9%B6%E9%9B%86%E7%9A%84%E9%9D%A2%E7%A7%AF-%E7%A6%BB%E6%95%A3%E5%8C%96/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Docker Ubuntu18.04中文乱码</span>
+                        <span class="hidden-mobile">C++ 矩形交集和并集的面积-离散化</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/04/16/C-%E8%AE%A1%E7%AE%97MD5/">
+                        <span class="hidden-mobile">C++ 计算MD5</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
