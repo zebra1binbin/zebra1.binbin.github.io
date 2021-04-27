@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>python tornado异步接口调用</title>
+    <link href="/2021/04/27/python-tornado%E5%BC%82%E6%AD%A5%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/"/>
+    <url>/2021/04/27/python-tornado%E5%BC%82%E6%AD%A5%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<p>tornado的coroutine装饰器，使得回调函数可以用同步的方式实现，极大提高了代码的可读性。它的实现涉及到了yield，ioloop和Future的模块。<br>示例：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> tornado.web<br><span class="hljs-keyword">import</span> tornado.ioloop<br><span class="hljs-keyword">import</span> tornado.httpserver<br><span class="hljs-keyword">from</span> tornado <span class="hljs-keyword">import</span> gen<br><span class="hljs-keyword">from</span> tornado.options <span class="hljs-keyword">import</span> define, options<br><br>define(<span class="hljs-string">&#x27;TestWeb&#x27;</span>, default=<span class="hljs-number">8080</span>, <span class="hljs-built_in">help</span>=<span class="hljs-string">&#x27;TestWeb&#x27;</span>, <span class="hljs-built_in">type</span>=<span class="hljs-built_in">int</span>)<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span>(<span class="hljs-params">tornado.web.RequestHandler</span>):</span><br><span class="hljs-meta">    @gen.coroutine</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span>(<span class="hljs-params">self</span>):</span><br>        <span class="hljs-keyword">yield</span> IOLoop.current().run_in_executor(<span class="hljs-literal">None</span>, test, <span class="hljs-string">&quot;testdata&quot;</span>)<br>        self.write(json.dumps(&#123;<span class="hljs-string">&quot;json&quot;</span>:<span class="hljs-string">&quot;hi&quot;</span>&#125;,ensure_ascii=<span class="hljs-literal">False</span>))<br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test</span>(<span class="hljs-params">self,<span class="hljs-built_in">str</span></span>):</span><br>        <span class="hljs-built_in">print</span>(<span class="hljs-built_in">str</span>)<br><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApplicationLogWeb</span>(<span class="hljs-params">tornado.web.Application</span>):</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span><br>        handlers = [<br>            (<span class="hljs-string">r&#x27;/hello world&#x27;</span>,HelloWorld),<br>        ]<br>        settings = &#123;<span class="hljs-string">&#x27;debug&#x27;</span>: <span class="hljs-literal">False</span>&#125;<br>        tornado.web.Application.__init__(self, handlers, **settings)<br><br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span>():</span><br>    options.parse_command_line() <br>    http_server = tornado.httpserver.HTTPServer(ApplicationLogWeb())<br>    http_server.listen(options.TestWeb)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;启动成功 监听端口：&#x27;</span> + <span class="hljs-built_in">str</span>(options.PortLogWeb))<br>    tornado.ioloop.IOLoop.current().start()<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    main()<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我的母亲-温家宝</title>
     <link href="/2021/04/20/%E6%88%91%E7%9A%84%E6%AF%8D%E4%BA%B2-%E6%B8%A9%E5%AE%B6%E5%AE%9D/"/>
     <url>/2021/04/20/%E6%88%91%E7%9A%84%E6%AF%8D%E4%BA%B2-%E6%B8%A9%E5%AE%B6%E5%AE%9D/</url>
